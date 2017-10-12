@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>View and ViewModel (Xamarin.Forms)</Name>
+    <Description>A View and ViewModel for Xamarin.Forms with Caliburn.Micro</Description>
+    <Icon>ViewViewModelItemTemplate.ico</Icon>
+    <TemplateID>0b7be4b4-3e1b-41d1-946e-a107427c2659</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <AppliesTo>CSharp + MultiTarget + !PerPlatformCompilation</AppliesTo>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>Name.cs</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem ReplaceParameters="true" TargetFileName="\$viewmodelfolder$\$fileinputname$ViewModel.cs">ViewModel.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="\$viewfolder$\$fileinputname$View.xaml" ItemType="EmbeddedResource" CustomTool="MSBuild:UpdateDesignTimeXaml">View.xaml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="\$viewfolder$\$fileinputname$View.xaml.cs" DependentUpon="$fileinputname$View.xaml" ItemType="Compile">View.xaml.cs</ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Xamarin.Forms.CaliburnMicro.StarterKit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8b6a1cdb5267c025</Assembly>
+    <FullClassName>Xamarin.Forms.CaliburnMicro.StarterKit.ViewViewModelWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

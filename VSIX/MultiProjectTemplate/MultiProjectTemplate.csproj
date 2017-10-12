@@ -187,9 +187,6 @@
     <Content Include="XF.UWP\project.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="XF.UWP\XF.CM.StarterKit.UWP_TemporaryKey.pfx">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <None Include="XF\packages.config" />
   </ItemGroup>
   <ItemGroup>

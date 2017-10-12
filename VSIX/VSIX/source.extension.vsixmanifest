@@ -17,6 +17,8 @@
     </Dependencies>
     <Assets>
         <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="MultiProjectTemplate" d:TargetPath="|MultiProjectTemplate;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+        <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="Project" d:ProjectName="ViewViewModelItemTemplate" d:TargetPath="|ViewViewModelItemTemplate;TemplateProjectOutputGroup|" Path="ItemTemplates" d:VsixSubPath="ItemTemplates" />
+        <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" AssemblyName="|%CurrentProject%;AssemblyName|" />
     </Assets>
     <Prerequisites>
         <Prerequisite Id="Component.Xamarin" Version="[15.0.26711.1,16.0)" DisplayName="Xamarin" />

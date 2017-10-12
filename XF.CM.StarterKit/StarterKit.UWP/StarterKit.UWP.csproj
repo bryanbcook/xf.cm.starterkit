@@ -107,7 +107,6 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <None Include="StarterKit.UWP_TemporaryKey.pfx" />
-    <None Include="XF.CM.StarterKit.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Default.rd.xml" />
