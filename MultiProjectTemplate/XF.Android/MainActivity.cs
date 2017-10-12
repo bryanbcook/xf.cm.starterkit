@@ -6,7 +6,7 @@ using Caliburn.Micro;
 namespace $safeprojectname$
 {
     [Activity(
-        Label = "XF.CM.StarterKit", 
+        Label = "$safeprojectname$", 
         Icon = "@drawable/icon", 
         Theme = "@style/MainTheme", 
         MainLauncher = true, 

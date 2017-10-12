@@ -38,7 +38,7 @@ namespace $safeprojectname$
             _container.Instance(_container);
 
             // CRITICAL! make sure our Xamarin.Forms App can only be initialized once!
-            _container.Singleton<$ext_safeprojectname$.App>();
+            _container.Singleton<App>();
 
             // TODO: Register any Platform-Specific abstractions here
         }
@@ -49,7 +49,7 @@ namespace $safeprojectname$
             return new[]
             {
                 GetType().Assembly,
-                typeof($ext_safeprojectname$.App).Assembly
+                typeof(App).Assembly
             };
         }
 
