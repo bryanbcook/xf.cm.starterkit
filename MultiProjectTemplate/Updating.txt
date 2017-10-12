@@ -1,0 +1,44 @@
+﻿To update the template:
+
+1. For each project, select Project -> Export Template
+	- don't install in the user's folder
+	- open the folder after creating the template
+2. rename the zip to the appropriate name XF.zip, XF.Android.zip, etc
+3. Extract the contents of the zip into the appropriate subfolder.
+4. Apply fix-ups
+
+
+Fix-ups:
+
+	XF\*.csproj
+
+		<ProjectGuid>{$ext_guid1$}</ProjectGuid>
+
+	XF.[Android|iOS|UWP]\*.csproj
+
+		<ItemGroup>
+			<ProjectReference Include="..\$ext_projectname$\$ext_projectname$.csproj">
+				<Project>{$ext_guid1$}</Project>
+				<Name>$ext_projectname$</Name>
+			</ProjectReference>
+		</ItemGroup>
+
+	XF.UWP\*.csproj
+
+		<ItemGroup>
+			<AppxManifest Include="Package.appxmanifest">
+				<SubType>Designer</SubType>
+			</AppxManifest>
+			<None Include="$projectname$_TemporaryKey.pfx" />
+		</ItemGroup>
+
+	XF.UWP\Package.appxmanifest
+
+		  <Properties>
+			<DisplayName>$ext_projectname$.UWP</DisplayName>
+			<PublisherDisplayName></PublisherDisplayName>
+			<Logo>Assets\StoreLogo.png</Logo>
+		  </Properties>
+
+		  <Applications>
+			<Application Id="App" Executable="$targetnametoken$.exe" EntryPoint=$ext_projectname$.UWP.App">
