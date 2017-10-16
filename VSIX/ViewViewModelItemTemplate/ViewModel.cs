@@ -4,5 +4,6 @@ namespace $viewmodelnamespace$
 {
 	public class $safeitemname$ : BaseScreen
 	{
+        
 	}
 }

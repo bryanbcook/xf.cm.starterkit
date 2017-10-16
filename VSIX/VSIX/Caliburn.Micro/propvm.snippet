@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>ViewModel Property (Caliburn.Micro)</Title>
+            <Shortcut>propvm</Shortcut>
+            <Description>Code snippet for a ViewModel property</Description>
+            <Author>Bryan Cook</Author>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+          <Declarations>
+            <Literal>
+              <ID>type</ID>
+              <ToolTip>Property Type</ToolTip>
+              <Default>string</Default>
+            </Literal>
+            <Literal>
+              <ID>property</ID>
+              <ToolTip>Property Name</ToolTip>
+              <Default>MyProperty</Default>
+            </Literal>
+            <Literal>
+              <ID>field</ID>
+              <ToolTip>Field Name</ToolTip>
+              <Default>myProperty</Default>
+            </Literal>
+          </Declarations>
+            <Code Language="csharp"><![CDATA[
+private $type$ _$field$;
+
+public $type$ $property$
+{
+    get { return _$field$; }
+    set { Set(ref _$field$, value); }
+}
+$end$]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

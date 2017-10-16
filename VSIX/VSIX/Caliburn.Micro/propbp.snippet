@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Xamarin.Forms Bindable Property</Title>
+      <Shortcut>propbp</Shortcut>
+      <Description>Code snippet for Xamarin.Forms Bindable Property</Description>
+      <Author>Bryan Cook</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Xamarin.Forms</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Property Type</ToolTip>
+          <Default>string</Default>
+        </Literal>
+        <Literal>
+          <ID>property</ID>
+          <ToolTip>Property Name</ToolTip>
+          <Default>MyProperty</Default>
+        </Literal>
+        <Literal>
+          <ID>owner</ID>
+          <ToolTip>Owner Type for the BindableProperty</ToolTip>
+          <Default>object</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[
+#region $property$
+public static BindableProperty $property$Property =
+	BindableProperty.Create(
+		"$property$",
+		typeof($type$),
+		typeof($owner$),
+		default($type$),
+		defaultBindingMode: BindingMode.OneWay,
+		propertyChanged: On$property$Changed);
+		
+private static void On$property$Changed(BindableObject sender, object oldValue, object newValue)
+{
+}
+#endregion
+
+public $type$ $property$
+{
+	get { return ($type$)GetValue($property$Property); }
+	set { SetValue($property$Property, value); }
+}
+
+$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
