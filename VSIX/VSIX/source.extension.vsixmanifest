@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="Xamarin.Forms.CaliburnMicro.StarterKit.91029194-3c98-4f99-9b9b-3d1184be7409" Version="0.7" Language="en-US" Publisher="Bryan Cook" />
+        <Identity Id="91029194-3c98-4f99-9b9b-3d1184be7409" Version="0.7" Language="en-US" Publisher="Bryan Cook" />
         <DisplayName>Xamarin.Forms Caliburn.Micro Starter Kit</DisplayName>
         <Description xml:space="preserve">A project template starter kit for Xamarin.Forms with Caliburn.Micro.</Description>
         <MoreInfo>http://www.bryancook.net</MoreInfo>
