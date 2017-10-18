@@ -9,7 +9,8 @@
     <ProvideDefaultName>true</ProvideDefaultName>
     <CreateNewFolder>true</CreateNewFolder>
     <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
-    <SortOrder>1000</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <!--<SortOrder>10</SortOrder>-->
     <TemplateID>bd5f64dd-10ff-4d5e-acdd-8bd4bbbf8e41</TemplateID>
   </TemplateData>
   <TemplateContent>

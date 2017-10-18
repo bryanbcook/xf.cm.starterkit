@@ -192,6 +192,7 @@
   <ItemGroup>
     <VSTemplate Include="MultiProjectTemplate.vstemplate">
       <SubType>Designer</SubType>
+      <OutputSubPath>Cross-Platform</OutputSubPath>
     </VSTemplate>
     <Content Include="XF.Android\Assets\AboutAssets.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

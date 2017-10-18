@@ -64,7 +64,9 @@
     <None Include="ViewViewModelItemTemplate.ico" />
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="ViewViewModelItemTemplate.vstemplate" />
+    <VSTemplate Include="ViewViewModelItemTemplate.vstemplate">
+      <OutputSubPath>Xamarin.Forms</OutputSubPath>
+    </VSTemplate>
   </ItemGroup>
   <ItemGroup>
     <None Include="View.xaml">
