@@ -103,9 +103,10 @@ namespace $safeprojectname$
         protected override void Configure()
         {
             _container = new WinRTContainer();
-            _container.RegisterWinRTServices();
+            _container.RegisterInstance(typeof(WinRTContainer), null, _container);
+            _container.RegisterInstance(typeof(SimpleContainer), null, _container);
 
-            _container.Singleton<Shared.App>();
+        _container.Singleton<Shared.App>();
 
             // TODO: Register Platform-specific dependencies here
         }
