@@ -5,6 +5,7 @@
         <DisplayName>Xamarin.Forms Caliburn.Micro Starter Kit</DisplayName>
         <Description xml:space="preserve">A project template starter kit for Xamarin.Forms with Caliburn.Micro.</Description>
         <MoreInfo>http://www.bryancook.net</MoreInfo>
+        <ReleaseNotes>https://github.com/bryanbcook/xf.cm.starterkit</ReleaseNotes>
         <Tags>xamarin.forms, caliburn.micro, project templates, mvvm, xamarin</Tags>
     </Metadata>
     <Installation>
