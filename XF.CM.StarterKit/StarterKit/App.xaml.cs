@@ -1,7 +1,9 @@
 ﻿using Caliburn.Micro;
 using Caliburn.Micro.Xamarin.Forms;
+using System.Linq;
 using System.Reflection;
 using Xamarin.Forms;
+using XF.CM.StarterKit.Services;
 using XF.CM.StarterKit.Utils;
 using XF.CM.StarterKit.ViewModels;
 
@@ -23,6 +25,9 @@ namespace XF.CM.StarterKit
                 .AllTypesOf<BaseScreen>(GetType().GetTypeInfo().Assembly, ContainerRegistrationKind.PerRequest)
                 // alternatively, register each viewmodel individually
                 //.PerRequest<MainViewModel>()
+
+                // register services
+                .Singleton<IEventAggregator,EventAggregator>()
                 ;
 
             // setup root page as a navigation page
@@ -43,6 +48,14 @@ namespace XF.CM.StarterKit
         protected override void OnStart()
         {
             // Handle when your app starts
+
+            // Force container to create instances of all IApplicationServices by calling toArray()
+            var services = _container.GetAllInstances<IApplicationService>().ToArray();
+
+            foreach(var service in services)
+            {
+                service.Initialize();
+            }
         }
 
         protected override void OnSleep()
